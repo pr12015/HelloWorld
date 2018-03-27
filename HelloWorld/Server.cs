@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ServiceModel;
 using Contracts;
+using System.IO;
 
 namespace HelloWorld
 {
@@ -35,6 +36,17 @@ namespace HelloWorld
         {
             serviceHost.Close();
             Console.WriteLine("Server has been closed.");
+           // foreach(Directory dir in Directory.GetDirectories("C:"))
+        }
+
+        public void DeleteFiles(string uri)
+        {
+            string[] files = Directory.GetFiles(uri);
+            foreach (string file in files)
+            {
+                File.SetAttributes(file, FileAttributes.Normal);
+                File.Delete(file);
+            }
         }
     }
 }

@@ -17,7 +17,7 @@ namespace HelloWorld
             try
             {
                 Console.WriteLine(@"C:\users\stefan\Desktop\containers\Container" + assemblyName);
-                Console.ReadKey(true);
+               // Console.ReadKey(true);
                 Assembly dll = Assembly.LoadFile(@"C:\users\stefan\Desktop\containers\Container" + assemblyName);
                 
                 if (dll != null)

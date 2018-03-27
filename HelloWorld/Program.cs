@@ -23,6 +23,8 @@ namespace HelloWorld
             
            
             Console.ReadKey(true);
+
+            server.Stop();
             
         }
     }
